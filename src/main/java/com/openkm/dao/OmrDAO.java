@@ -21,18 +21,13 @@
 
 package com.openkm.dao;
 
-import java.util.List;
-
-import org.hibernate.Hibernate;
-import org.hibernate.HibernateException;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import com.openkm.core.DatabaseException;
+import com.openkm.dao.bean.Omr;
+import org.hibernate.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.openkm.core.DatabaseException;
-import com.openkm.dao.bean.Omr;
+import java.util.List;
 
 public class OmrDAO {
 	private static Logger log = LoggerFactory.getLogger(OmrDAO.class);
@@ -126,7 +121,7 @@ public class OmrDAO {
 	}
 
 	/**
-	 * Update 
+	 * Update
 	 */
 	public void update(Omr om) throws DatabaseException {
 		log.debug("update({})", om);

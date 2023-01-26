@@ -46,11 +46,11 @@ import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.index.TermDocs;
 import org.apache.lucene.index.TermEnum;
+import org.apache.lucene.queries.mlt.MoreLikeThis;
 import org.apache.lucene.queryParser.QueryParser;
 import org.apache.lucene.search.BooleanClause.Occur;
 import org.apache.lucene.search.*;
 import org.apache.lucene.search.highlight.*;
-import org.apache.lucene.search.similar.MoreLikeThis;
 import org.apache.lucene.store.Directory;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -68,9 +68,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Search results are filtered by com.openkm.module.db.stuff.ReadAccessFilterFactory, which limit the results only for
@@ -646,7 +644,7 @@ public class SearchDAO {
 
 			if (str != null && !str.isEmpty()) {
 				StringReader sr = new StringReader(str);
-				Query likeThisQuery = mlt.like(sr);
+				Query likeThisQuery = mlt.like((Map<String, Collection<Object>>) sr);
 
 				BooleanQuery query = new BooleanQuery();
 				query.add(likeThisQuery, Occur.SHOULD);

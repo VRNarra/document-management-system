@@ -21,23 +21,6 @@
 
 package com.openkm.servlet.admin;
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.openkm.automation.Action;
 import com.openkm.automation.Validation;
 import com.openkm.core.DatabaseException;
@@ -47,8 +30,22 @@ import com.openkm.extractor.RegisteredExtractors;
 import com.openkm.extractor.TextExtractor;
 import com.openkm.util.PluginUtils;
 import com.openkm.util.WebUtils;
-
 import net.xeoh.plugins.base.Plugin;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Plugin servlet

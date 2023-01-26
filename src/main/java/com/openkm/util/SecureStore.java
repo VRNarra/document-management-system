@@ -25,13 +25,12 @@ import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.RandomStringUtils;
 
-import javax.crypto.*;
-import javax.crypto.spec.DESKeySpec;
-import java.io.*;
-import java.security.InvalidKeyException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 
 public class SecureStore {
 	/**

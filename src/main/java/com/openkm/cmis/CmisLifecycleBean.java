@@ -21,12 +21,12 @@
 
 package com.openkm.cmis;
 
+import jakarta.servlet.ServletContext;
 import org.apache.chemistry.opencmis.server.impl.CmisRepositoryContextListener;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.web.context.ServletContextAware;
 
-import javax.servlet.ServletContext;
 import java.util.HashMap;
 
 public class CmisLifecycleBean implements ServletContextAware, InitializingBean, DisposableBean {

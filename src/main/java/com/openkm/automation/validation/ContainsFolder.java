@@ -21,16 +21,15 @@
 
 package com.openkm.automation.validation;
 
-import java.util.List;
-import java.util.Map;
-
 import com.openkm.automation.AutomationUtils;
 import com.openkm.automation.Validation;
 import com.openkm.dao.NodeFolderDAO;
 import com.openkm.dao.bean.Automation;
 import com.openkm.dao.bean.NodeFolder;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * Check if the current folder contains a child folder with the designed name.

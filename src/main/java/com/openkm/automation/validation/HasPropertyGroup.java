@@ -21,15 +21,14 @@
 
 package com.openkm.automation.validation;
 
-import java.util.List;
-import java.util.Map;
-
 import com.openkm.automation.AutomationUtils;
 import com.openkm.automation.Validation;
 import com.openkm.dao.NodeBaseDAO;
 import com.openkm.dao.bean.Automation;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * HasPropertyGroup

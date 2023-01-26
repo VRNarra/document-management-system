@@ -175,7 +175,7 @@ public class TaskInstance implements Serializable, Comparable<TaskInstance> {
 	}
 
 	public int compareTo(TaskInstance arg0) {
-		return new Long(this.id).compareTo(arg0.id);
+		return  Long.valueOf(this.id).compareTo(arg0.id);
 	}
 
 	public Token getToken() {

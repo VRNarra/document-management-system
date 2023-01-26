@@ -21,16 +21,14 @@
 
 package com.openkm.automation.validation;
 
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.openkm.automation.AutomationUtils;
 import com.openkm.automation.Validation;
 import com.openkm.dao.bean.Automation;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
 
 @PluginImplementation
 public class PathMatches implements Validation {

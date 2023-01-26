@@ -22,10 +22,10 @@
 package com.openkm.servlet.frontend;
 
 import com.openkm.core.Config;
+import jakarta.servlet.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
 
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.IOException;
 
 /**
@@ -37,10 +37,10 @@ public class UploadThrottleFilter implements Filter {
 	}
 
 	public void doFilter(final ServletRequest servletRequest, final ServletResponse servletResponse,
-	                     final FilterChain filterChain) throws IOException, ServletException {
+						 final FilterChain filterChain) throws IOException, ServletException {
 		if (Config.UPLOAD_THROTTLE_FILTER) {
 			final DelayRequestWrapper requestWrapper = new DelayRequestWrapper((HttpServletRequest) servletRequest);
-			filterChain.doFilter(requestWrapper, servletResponse);
+			filterChain.doFilter((ServletRequest) requestWrapper, servletResponse);
 		} else {
 			filterChain.doFilter(servletRequest, servletResponse);
 		}
@@ -85,6 +85,21 @@ public class UploadThrottleFilter implements Filter {
 			}
 
 			return chr;
+		}
+
+		@Override
+		public boolean isFinished() {
+			return false;
+		}
+
+		@Override
+		public boolean isReady() {
+			return false;
+		}
+
+		@Override
+		public void setReadListener(ReadListener listener) {
+
 		}
 	}
 }

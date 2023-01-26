@@ -21,14 +21,13 @@
 
 package com.openkm.automation.validation;
 
-import java.util.Map;
-
 import com.openkm.api.OKMRepository;
 import com.openkm.automation.AutomationUtils;
 import com.openkm.automation.Validation;
 import com.openkm.dao.bean.Automation;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.Map;
 
 /**
  * Check if the current parent path contains a designed one. The only

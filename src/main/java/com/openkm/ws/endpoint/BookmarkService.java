@@ -28,12 +28,12 @@ import com.openkm.core.RepositoryException;
 import com.openkm.dao.bean.Bookmark;
 import com.openkm.module.BookmarkModule;
 import com.openkm.module.ModuleManager;
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebService;
 import java.util.List;
 
 @WebService(name = "OKMBookmark", serviceName = "OKMBookmark", targetNamespace = "http://ws.openkm.com")
@@ -42,7 +42,7 @@ public class BookmarkService {
 
 	@WebMethod
 	public Bookmark add(@WebParam(name = "token") String token, @WebParam(name = "nodePath") String nodePath,
-	                    @WebParam(name = "name") String name) throws AccessDeniedException, PathNotFoundException, RepositoryException,
+						@WebParam(name = "name") String name) throws AccessDeniedException, PathNotFoundException, RepositoryException,
 			DatabaseException {
 		log.debug("add({}, {}, {})", token, nodePath, name);
 		BookmarkModule bm = ModuleManager.getBookmarkModule();

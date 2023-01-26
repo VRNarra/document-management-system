@@ -49,6 +49,13 @@ import com.sun.mail.imap.IMAPFolder;
 import com.sun.mail.pop3.POP3Folder;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
+import jakarta.mail.MessagingException;
+import jakarta.mail.Part;
+import jakarta.mail.Session;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeBodyPart;
+import jakarta.mail.internet.MimeMessage;
+import jakarta.mail.internet.MimeMultipart;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.NameValuePair;
@@ -59,14 +66,14 @@ import org.apache.commons.lang.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.mail.search.FlagTerm;
-import javax.mail.util.ByteArrayDataSource;
+import jakarta.activation.DataHandler;
+import jakarta.activation.DataSource;
+import jakarta.mail.*;
+import jakarta.mail.internet.*;
+import jakarta.mail.search.FlagTerm;
+import jakarta.mail.util.ByteArrayDataSource;
 import javax.naming.InitialContext;
-import javax.rmi.PortableRemoteObject;
+//import javax.rmi.PortableRemoteObject;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -105,7 +112,8 @@ public class MailUtils {
 		try {
 			InitialContext initialContext = new InitialContext();
 			Object obj = initialContext.lookup(Config.JNDI_BASE + "mail/OpenKM");
-			mailSession = (Session) PortableRemoteObject.narrow(obj, Session.class);
+			//TODO
+//			mailSession = (Session) PortableRemoteObject.narrow(obj, Session.class);
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 			mailSession = getDefaultSession();

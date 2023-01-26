@@ -21,16 +21,15 @@
 
 package com.openkm.automation.validation;
 
-import java.util.Map;
-
 import com.openkm.automation.AutomationUtils;
 import com.openkm.automation.Validation;
 import com.openkm.dao.bean.Automation;
 import com.openkm.dao.bean.NodeDocument;
 import com.openkm.dao.bean.NodeFolder;
 import com.openkm.dao.bean.NodeMail;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.Map;
 
 @PluginImplementation
 public class NameMatches implements Validation {
@@ -47,7 +46,7 @@ public class NameMatches implements Validation {
 				return ((NodeFolder) node).getName().matches(str);
 			} else if (node instanceof NodeMail) {
 				return ((NodeMail) node).getName().matches(str);
-			} 
+			}
 		}
 
 		return false;

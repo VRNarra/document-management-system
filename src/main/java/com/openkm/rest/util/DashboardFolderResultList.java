@@ -1,6 +1,5 @@
 package com.openkm.rest.util;
 
-import com.openkm.bean.DashboardDocumentResult;
 import com.openkm.bean.DashboardFolderResult;
 
 import javax.xml.bind.annotation.XmlElement;

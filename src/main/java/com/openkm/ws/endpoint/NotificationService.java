@@ -21,20 +21,14 @@
 
 package com.openkm.ws.endpoint;
 
-import com.openkm.core.AccessDeniedException;
-import com.openkm.core.DatabaseException;
-import com.openkm.core.LockException;
-import com.openkm.core.PathNotFoundException;
-import com.openkm.core.RepositoryException;
+import com.openkm.core.*;
 import com.openkm.module.ModuleManager;
 import com.openkm.module.NotificationModule;
 import com.openkm.principal.PrincipalAdapterException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebService;
+import jakarta.jws.*;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Set;

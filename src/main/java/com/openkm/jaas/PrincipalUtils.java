@@ -51,13 +51,13 @@ public class PrincipalUtils {
 	public static String getUser() throws NamingException {
 		Subject subject = PrincipalUtils.getSubject();
 		String user = null;
-
-		for (Principal obj : subject.getPrincipals()) {
-			if (!(obj instanceof java.security.acl.Group)) {
-				java.security.Principal principal = obj;
-				user = principal.getName();
-			}
-		}
+// TODO uncomment
+//		for (Principal obj : subject.getPrincipals()) {
+//			if (!(obj instanceof java.security.Group)) {
+//				java.security.Principal principal = obj;
+//				user = principal.getName();
+//			}
+//		}
 
 		return user;
 	}
@@ -68,17 +68,17 @@ public class PrincipalUtils {
 	public static Set<String> getRoles() throws NamingException {
 		Subject subject = PrincipalUtils.getSubject();
 		Set<String> roles = new HashSet<>();
-
-		for (Object obj : subject.getPrincipals()) {
-			if (obj instanceof java.security.acl.Group) {
-				java.security.acl.Group group = (java.security.acl.Group) obj;
-
-				for (Enumeration<? extends java.security.Principal> groups = group.members(); groups.hasMoreElements(); ) {
-					java.security.Principal rol = groups.nextElement();
-					roles.add(rol.getName());
-				}
-			}
-		}
+//TODO uncomment
+//		for (Object obj : subject.getPrincipals()) {
+//			if (obj instanceof java.security.acl.Group) {
+//				java.security.acl.Group group = (java.security.acl.Group) obj;
+//
+//				for (Enumeration<? extends java.security.Principal> groups = group.members(); groups.hasMoreElements(); ) {
+//					java.security.Principal rol = groups.nextElement();
+//					roles.add(rol.getName());
+//				}
+//			}
+//		}
 
 		return roles;
 	}

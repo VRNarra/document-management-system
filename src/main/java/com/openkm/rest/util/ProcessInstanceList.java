@@ -21,13 +21,12 @@
 
 package com.openkm.rest.util;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.openkm.bean.workflow.ProcessInstance;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import com.openkm.bean.workflow.ProcessInstance;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlRootElement(name = "processInstances")
 public class ProcessInstanceList {

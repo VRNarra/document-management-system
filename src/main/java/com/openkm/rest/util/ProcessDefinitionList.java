@@ -21,13 +21,12 @@
 
 package com.openkm.rest.util;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.openkm.bean.workflow.ProcessDefinition;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-
-import com.openkm.bean.workflow.ProcessDefinition;
+import java.util.ArrayList;
+import java.util.List;
 
 @XmlRootElement(name = "processDefinitions")
 public class ProcessDefinitionList {

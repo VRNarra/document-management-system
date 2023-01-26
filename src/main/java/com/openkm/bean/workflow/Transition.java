@@ -69,7 +69,7 @@ public class Transition implements Serializable, Comparable<Transition> {
 	}
 
 	public int compareTo(Transition arg0) {
-		return new Long(this.id).compareTo(arg0.id);
+		return  Long.valueOf(this.id).compareTo(arg0.id);
 	}
 
 	public String toString() {

@@ -24,12 +24,11 @@ package com.openkm.ws.endpoint;
 import com.openkm.core.*;
 import com.openkm.module.ModuleManager;
 import com.openkm.module.PropertyModule;
+import jakarta.jws.WebMethod;
+import jakarta.jws.WebParam;
+import jakarta.jws.WebService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebService;
 
 @WebService(name = "OKMProperty", serviceName = "OKMProperty", targetNamespace = "http://ws.openkm.com")
 public class PropertyService implements PropertyModule {

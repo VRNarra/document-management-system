@@ -35,12 +35,12 @@ import com.openkm.frontend.client.constants.service.ErrorCode;
 import com.openkm.util.*;
 import com.openkm.util.impexp.RepositoryExporter;
 import com.openkm.util.impexp.TextInfoDecorator;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;

@@ -21,17 +21,16 @@
 
 package com.openkm.automation.action;
 
-import java.util.Map;
-
+import bsh.Interpreter;
 import com.openkm.automation.Action;
 import com.openkm.automation.AutomationUtils;
 import com.openkm.dao.bean.Automation;
 import com.openkm.dao.bean.NodeBase;
 import com.openkm.module.db.stuff.DbSessionManager;
 import com.openkm.spring.PrincipalUtils;
-
-import bsh.Interpreter;
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.Map;
 
 /**
  * ExecuteScripting

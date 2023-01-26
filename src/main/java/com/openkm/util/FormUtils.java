@@ -604,7 +604,7 @@ public class FormUtils {
 	/**
 	 *
 	 */
-	private static final class ErrorHandler extends DefaultHandler {
+	private static final class ErrorHandler extends DefaultHandler implements org.xml.sax.ErrorHandler {
 		@Override
 		public void error(SAXParseException exception) throws SAXException {
 			log.error(exception.getMessage());

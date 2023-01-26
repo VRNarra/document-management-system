@@ -21,15 +21,14 @@
 
 package com.openkm.automation.action;
 
-import java.util.Map;
-
 import com.openkm.automation.Action;
 import com.openkm.automation.AutomationUtils;
 import com.openkm.core.Config;
 import com.openkm.dao.NodeBaseDAO;
 import com.openkm.dao.bean.Automation;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.Map;
 
 /**
  * AddKeyword

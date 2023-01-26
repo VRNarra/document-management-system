@@ -41,10 +41,10 @@ import com.openkm.spring.PrincipalUtils;
 import com.openkm.util.GWTUtil;
 import com.openkm.util.MailUtils;
 import com.openkm.util.pagination.FilterUtils;
+import jakarta.mail.MessagingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.mail.MessagingException;
 import java.io.IOException;
 import java.util.*;
 
@@ -387,9 +387,6 @@ public class MailServlet extends OKMRemoteServiceServlet implements OKMMailServi
 		} catch (PrincipalAdapterException e) {
 			log.warn(e.getMessage(), e);
 			throw new OKMException(ErrorCode.get(ErrorCode.ORIGIN_OKMMailService, ErrorCode.CAUSE_PrincipalAdapter), e.getMessage());
-		} catch (MessagingException e) {
-			log.warn(e.getMessage(), e);
-			throw new OKMException(ErrorCode.get(ErrorCode.ORIGIN_OKMMailService, ErrorCode.CAUSE_Messaging), e.getMessage());
 		} catch (PathNotFoundException e) {
 			log.warn(e.getMessage(), e);
 			throw new OKMException(ErrorCode.get(ErrorCode.ORIGIN_OKMMailService, ErrorCode.CAUSE_PathNotFound), e.getMessage());
@@ -408,6 +405,8 @@ public class MailServlet extends OKMRemoteServiceServlet implements OKMMailServi
 		} catch (LockException e) {
 			log.warn(e.getMessage(), e);
 			throw new OKMException(ErrorCode.get(ErrorCode.ORIGIN_OKMMailService, ErrorCode.CAUSE_Lock), e.getMessage());
+		} catch (MessagingException e) {
+			throw new RuntimeException(e);
 		}
 	}
 

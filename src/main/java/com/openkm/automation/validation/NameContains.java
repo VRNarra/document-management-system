@@ -21,8 +21,6 @@
 
 package com.openkm.automation.validation;
 
-import java.util.Map;
-
 import com.openkm.automation.AutomationUtils;
 import com.openkm.automation.Validation;
 import com.openkm.dao.NodeBaseDAO;
@@ -30,8 +28,9 @@ import com.openkm.dao.bean.Automation;
 import com.openkm.dao.bean.NodeDocument;
 import com.openkm.dao.bean.NodeFolder;
 import com.openkm.dao.bean.NodeMail;
-
 import net.xeoh.plugins.base.annotations.PluginImplementation;
+
+import java.util.Map;
 
 @PluginImplementation
 public class NameContains implements Validation {

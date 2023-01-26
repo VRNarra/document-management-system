@@ -33,9 +33,7 @@ import com.openkm.ws.util.StringPair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import javax.jws.WebService;
+import jakarta.jws.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;

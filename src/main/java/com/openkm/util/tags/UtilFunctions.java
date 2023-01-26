@@ -21,10 +21,9 @@
 
 package com.openkm.util.tags;
 
-import org.hibernate.collection.PersistentSet;
-
 import com.openkm.core.Config;
 import com.openkm.spring.PrincipalUtils;
+import org.hibernate.collection.PersistentSet;
 
 import java.util.Collection;
 
@@ -49,7 +48,7 @@ public class UtilFunctions {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Replace string
 	 */
@@ -60,7 +59,7 @@ public class UtilFunctions {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Check for user with ROLE_ADMIN role.
 	 */

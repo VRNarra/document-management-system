@@ -21,9 +21,8 @@
 
 package com.openkm.rest.util;
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 @XmlRootElement(name = "revokedUser")
 public class RevokedUser implements Serializable {
